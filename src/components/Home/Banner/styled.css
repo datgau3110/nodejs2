@@ -1,0 +1,43 @@
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("./image/6.png");
+    height: 40vh;
+    width: 100%;
+    background-position: center;
+   
+
+}
+#banner h4{
+    color: rgb(235, 235, 247);
+    font-size: 20px;
+}
+#banner h2{
+    color: #f3f0f3;
+    font-size: 40px;
+    padding: 10px 0;
+     
+}
+#banner h2 span{
+    color: #ef3636;
+    
+}
+#banner button:hover{
+    background: #084743;
+    color: rgb(13, 174, 214);
+}
+@media (max-width:799px){
+    #banner {
+        height: 20vh;
+        background-position: right 10% top 40%;
+    }
+}
+
+@media(max-width : 477px) {
+    #banner {
+        height: 40vh;
+    }
+}
