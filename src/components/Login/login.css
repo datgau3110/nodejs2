@@ -1,0 +1,23 @@
+.input {
+    width: 90%;
+    padding: 10px 0px 5px 2px;
+  }
+  .form-button {
+    padding: 15px 0px 10px 0px;
+  }
+  .form-submit {
+    display: inline-block;
+    width: 90%;
+  }
+  .signup-image-link {
+    font-size: 14px;
+    color: #222;
+    display: block;
+    text-align: center;
+  }
+  a:focus,
+  a:active {
+    outline: none;
+    transition: all 300ms ease 0s;
+  }
+  
