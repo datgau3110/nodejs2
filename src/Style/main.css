@@ -1,0 +1,30 @@
+.header{
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(43, 39, 39) ;
+}
+.nav-item{
+    padding-right: 60px; 
+    float: left;
+    color: aliceblue;
+}
+.navbar-nav{
+    margin-left: 170px;
+}
+.nav-link{
+    text-decoration: none;
+    color: aliceblue;
+}
+ul{
+    list-style-type: none !important;
+}
+.icon{
+    float: right;
+    color: aliceblue;
+}
+
+.nav-link:hover{
+    color: rgb(54, 78, 99);
+}
