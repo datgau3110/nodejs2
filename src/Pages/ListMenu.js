@@ -16,12 +16,12 @@ function List(props) {
     useEffect(() => {
         fetchPosts();
     }, []);
-
+    
     const filteredData = posts.filter((el) => {
         if (props.input === '') {
             return el;
         } else {
-            return el.Name.toLowerCase().includes(props.input)
+            return el.Name.toLowerCase().includes(props.input), el.Price.toLowerCase().includes(props.input)
         }
     })
     return (

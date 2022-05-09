@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
-
+import '../Pages/singin.css';
 class TableRow extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +16,7 @@ class TableRow extends Component {
     }
     render() {
         return (
-            <tr>
+            <tr >
                 <td>
                     {this.props.obj.Name}
                 </td>

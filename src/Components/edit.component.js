@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../Pages/singin.css';
 import { Link, useParams } from 'react-router-dom';
 function withRouter(Component) {
     function ComponentWithRouter(props) {
@@ -60,33 +61,35 @@ class Edit extends Component {
 
     render() {
         return (
-            <div style={{ marginTop: 10 }}>
+            <div className='Container'>
                 <h3 align="center">ID:{this.props.params.postId}</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Name:  </label>
                         <input
                             type="text"
                             className="form-control"
                             value={this.state.Name}
                             onChange={this.onChangeName}
+                            placeholder="Name"
                         />
                     </div>
                     <div className="form-group">
-                        <label>Price: </label>
                         <input type="text"
                             className="form-control"
                             value={this.state.Price}
                             onChange={this.onChangePrice}
+                            placeholder="Price"
                         />
                     </div>
-                    <div className="form-group">
-                        <Link to='/Login/index'>Index</Link>
-                    </div>
+                   
                     <div className="form-group">
                         <input type="submit"
                             value="Update Post"
                             className="btn btn-primary" />
+                            
+                    </div>
+                    <div className="form-group">
+                        <Link to='/Login/index'>Index</Link>
                     </div>
                 </form>
             </div>
