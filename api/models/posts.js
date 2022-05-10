@@ -6,12 +6,16 @@ const PostSchema = mongoose.Schema({
         require:true
     },
     Price: {
+        type: Number,
+        require: true
+    },
+    Author: {
         type: String,
         require: true
     },
-    imgPost:{
-        type: String
-    },
+    // imgPost:{
+    //     type: String
+    // },
     date:{
         type: Date,
         default: Date.now

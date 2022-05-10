@@ -15,7 +15,8 @@ router.post('/', async (req, res) => {
     // console.log(req.body);
     const post = new Post({
         Name: req.body.Name,
-        Price: req.body.Price
+        Price: req.body.Price,
+        Author: req.body.Author
     });
     try {
         const savedPost = await post.save();

@@ -9,11 +9,13 @@ export default class Create extends Component {
         super(props);
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangePrice = this.onChangePrice.bind(this);
+        this.onChangeAuthor = this.onChangeAuthor.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             Name: '',
-            Price: ''
+            Price: '',
+            Author:''
         }
     }
 
@@ -28,20 +30,26 @@ export default class Create extends Component {
             Price: e.target.value
         });
     }
-
+    onChangeAuthor(e) {
+        this.setState({
+            Author: e.target.value
+        });
+    }
     onSubmit(e) {
         e.preventDefault();
 
         const obj = {
             Name: this.state.Name,
-            Price: this.state.Price
+            Price: this.state.Price,
+            Author: this.state.Author
         };
         axios.post('http://localhost:7000/posts', obj)
             .then(res => console.log(res.data));
 
         this.setState({
             Name: '',
-            Price: ''
+            Price: '',
+            Author:''
         })
     }
 
@@ -60,6 +68,12 @@ export default class Create extends Component {
                     <div className="form-group">
                         <input type="text" className="form-control" value={this.state.Price}
                                onChange={this.onChangePrice} placeholder="Price"/>
+                    </div>
+                    <div className="form-group">
+                        <input type="text" className="form-control"
+                               value={this.state.Author}
+                               onChange={this.onChangeAuthor} placeholder="Author"
+                        />
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Register Post" className="btn btn-primary"/>

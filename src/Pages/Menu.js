@@ -1,6 +1,7 @@
-import '../Style/main.css'
+import './Menu.css'
 import React, { useState } from "react";
 import List from './ListMenu';
+import { FaRegDotCircle } from "react-icons/fa";
 function Menu() {
     const [inputText, setInputText] = useState("");
     let inputHandler = (e) => {
@@ -11,15 +12,10 @@ function Menu() {
 
 
     return (
-        <div style={{marginLeft:'5rem'}} >
-            <h1 style={{marginLeft:'4rem'}}>React Search</h1>
-            <div className="search" style={{marginLeft:'4rem'}}>
-                <input
-                    id="outlined-basic"
-                    onChange={inputHandler}
-                    variant="outlined"
-                    label="Search"
-                />
+        <div>
+            <div className="search-box">
+                <button className="btn-search"><FaRegDotCircle style={{color:'white'}} className="fas fa-search"></FaRegDotCircle></button>
+                <input onChange={inputHandler} type="text" className="input-search" placeholder="Type to Search..." />
             </div>
             <List input={inputText}></List>
         </div>

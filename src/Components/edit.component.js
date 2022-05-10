@@ -14,12 +14,14 @@ class Edit extends Component {
         super(props);
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangePrice = this.onChangePrice.bind(this);
+        this.onChangeAuthor = this.onChangeAuthor.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             Name: '',
             Price: '',
-            postId: ''
+            postId: '',
+            Author:''
         }
     }
 
@@ -29,7 +31,8 @@ class Edit extends Component {
                 this.setState({
                     Name: response.data.Name,
                     Price: response.data.Price,
-                    postId: response.data.postId
+                    postId: response.data.postId,
+                    Author: response.data.Author
                 });
             })
             .catch(function (error) {
@@ -47,12 +50,17 @@ class Edit extends Component {
             Price: e.target.value
         })
     }
-
+    onChangeAuthor(e) {
+        this.setState({
+            Author: e.target.value
+        })
+    }
     onSubmit(e) {
         e.preventDefault();
         const obj = {
             Name: this.state.Name,
             Price: this.state.Price,
+            Author: this.state.Author
         };
         axios.patch('http://localhost:7000/posts/' + this.props.params.postId, obj)
             .then(res => console.log(res.data));
@@ -81,7 +89,14 @@ class Edit extends Component {
                             placeholder="Price"
                         />
                     </div>
-                   
+                    <div className="form-group">
+                        <input type="text"
+                            className="form-control"
+                            value={this.state.Author}
+                            onChange={this.onChangeAuthor}
+                            placeholder="Author"
+                        />
+                    </div>
                     <div className="form-group">
                         <input type="submit"
                             value="Update Post"
