@@ -1,0 +1,68 @@
+.row {
+  padding-top: 2rem;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-family: 'Lato' !important;
+  
+}
+
+.MenuPage{
+  /* background-color: #30393a; */
+  width: 100%;
+  height:max-content;
+  height: 1500px;
+  margin-top: -0.5rem;
+  background: linear-gradient(-45deg, #160b0b, #162a2c, #173644, #1f5044);
+  /* background-size: 400% 400%; */
+  animation: gradient 15s ease infinite;
+  /* height: 100%; */
+}
+
+.btn-card {
+  background: linear-gradient(-45deg, #213247, #41231e, #172b44, #491d21);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100%;
+}
+.text{
+  color: aliceblue;
+}
+.icon {
+  color: #1a2925;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+
+
+.container {
+  position: absolute;
+  /* margin: 0 auto; */
+  margin-top: 4rem;
+  margin-right: 10rem;
+  /* padding-left: 8rem; */
+  /* float: left; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 50px;
+  
+}
+  
